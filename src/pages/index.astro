@@ -1,0 +1,339 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const SITE = 'https://frankstongrannyflats.com.au';
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How much does a granny flat cost in Frankston in 2026?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Most granny flats in Frankston and on the Mornington Peninsula fall in these bands: 1-bedroom modular 35-50m² $90K-$130K, 1-bedroom custom on-site $130K-$180K, 2-bedroom 60-90m² $140K-$220K, dual-occupancy (full second dwelling, separate-title-ready) $180K-$280K. Garden studios without plumbing $25K-$60K. NDIS SDA-compliant builds $300K-$600K depending on category. Site prep, council fees, NatHERS report and connections add $8K-$25K depending on site complexity." }
+    },
+    {
+      "@type": "Question",
+      "name": "Do I need a planning permit for a granny flat in Frankston or on the Peninsula?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Depends on size, zone and council. Frankston City Council allows one second dwelling per lot ≥300m² and small ones use the 2024 VicSmart fast-track pathway (typically 10 business days) if the GFA is under 60m² and design meets ResCode. Anything 60-100m², or in a Design and Development Overlay, or visible from a heritage-listed streetscape, needs a full planning permit (about 3 months). Mornington Peninsula Shire has additional DCPO controls especially around the coastal villages (Mt Martha, Sorrento, Portsea) and BAL bushfire ratings apply on the eastern side. We handle the council process end-to-end." }
+    },
+    {
+      "@type": "Question",
+      "name": "How long does it take to build a granny flat?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Modular (factory-built then craned in): 12-18 weeks from contract signing including approvals. Custom on-site build: 20-30 weeks. The VicSmart pathway can save 6-10 weeks of approval time on eligible builds. Site prep is 2-3 weeks regardless of build method. We schedule council approval and the build sequence in parallel where the design is locked." }
+    },
+    {
+      "@type": "Question",
+      "name": "Can a granny flat be rented out or used as Airbnb on the Mornington Peninsula?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Long-term rental: yes in most cases. The lot still needs to be ≥300m² (Frankston City) and the dwelling must meet building regs. Short-stay / Airbnb: more complicated. Mornington Peninsula Shire introduced short-stay registration in 2023 — both the primary dwelling and granny flat must be registered, with precinct-specific caps. Frankston City has lighter rules. We design with the future rental use in mind (separate entry, separate meters, sound separation) so you have the option without burning bridges with council later." }
+    }
+  ]
+};
+---
+<Layout
+  title="Granny Flats Frankston & Mornington Peninsula | 1-Bed, 2-Bed, NDIS SDA | (03) 9003 0108"
+  description="Specialist granny flat & second-dwelling builders for Frankston, Frankston South, Mt Eliza, Mornington and the wider Peninsula. VicSmart fast-track, full planning permit, NDIS SDA compliant. NCC 2022 / 7-star NatHERS. Free design consultation - call (03) 9003 0108.">
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+  </Fragment>
+
+  <!-- HERO -->
+
+<style>
+  /* Image-banner integration (added 2026-06-04) */
+  .hero {
+    position: relative;
+    background-image: linear-gradient(135deg, rgba(15, 23, 42, 0.55), rgba(15, 23, 42, 0.28)), url('/images/hero.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #fff;
+  }
+  .hero h1,
+  .hero .hero-sub,
+  .hero .hero-eyebrow,
+  .hero .hero-trust,
+  .hero .accent {
+    color: #fff;
+  }
+  .hero .accent {
+    color: #fcd34d;
+  }
+  .hero .hero-eyebrow {
+    color: rgba(255, 255, 255, 0.85);
+  }
+  .hero .hero-trust {
+    color: rgba(255, 255, 255, 0.78);
+  }
+
+  .image-banner {
+    width: 100%;
+    max-height: 460px;
+    overflow: hidden;
+    margin: 0;
+  }
+  .image-banner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 70%;
+    display: block;
+  }
+  .image-banner figcaption {
+    background: rgba(15, 23, 42, 0.92);
+    color: rgba(255, 255, 255, 0.85);
+    padding: 0.85rem 1.25rem;
+    text-align: center;
+    font-size: 0.95rem;
+    margin: 0;
+  }
+</style>
+
+  <section class="hero">
+    <div class="hero-inner">
+      <span class="hero-eyebrow">Frankston &middot; Frankston South &middot; Mt Eliza &middot; Mornington Peninsula</span>
+      <h1>Frankston&rsquo;s specialist <span class="accent">granny flat</span> &amp; second-dwelling builders.</h1>
+      <p class="hero-sub">
+        1-bedroom, 2-bedroom, dual-occupancy and NDIS SDA second dwellings across
+        Frankston City and the Mornington Peninsula. VicSmart fast-track where eligible,
+        full planning permit where required. VBA-registered builder, NCC 2022 / 7-star
+        NatHERS compliant. Free design consultation and fixed quote in 7 days.
+      </p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="tel:+61390030108">&#9742; Call (03) 9003 0108</a>
+        <a class="btn btn-ghost" href="/quote/">Book a free consultation</a>
+      </div>
+
+      <div class="hero-trust">
+        <div><strong>7 days</strong>From enquiry to fixed quote</div>
+        <div><strong>$90K&ndash;$280K</strong>Typical build range</div>
+        <div><strong>VicSmart</strong>10-day approval where eligible</div>
+        <div><strong>7-star</strong>NatHERS thermal compliant</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section class="section">
+    <div class="section-inner">
+      <span class="section-eyebrow">What we build</span>
+      <h2>Five granny flat &amp; second-dwelling formats.</h2>
+      <p class="section-lead">
+        Every block, every family, every budget is different. We design and build five
+        distinct second-dwelling formats &mdash; from sub-25m&sup2; garden studios with
+        no council permit needed, through to full NDIS SDA-compliant homes worth $500K+
+        on completion.
+      </p>
+
+      <div class="svc-grid">
+        <a class="svc-card" href="/services/one-bedroom/">
+          <div class="svc-icon" aria-hidden="true">&#9728;</div>
+          <h3>1-Bedroom granny flats</h3>
+          <p>35&ndash;50m&sup2;. The classic ageing-in-place or adult-child solution. Open-plan kitchen/living, one bedroom, bathroom. $90K&ndash;$180K depending on modular vs custom and Peninsula coastal-finish requirements.</p>
+          <span class="svc-link">See 1-bedroom &rarr;</span>
+        </a>
+
+        <a class="svc-card" href="/services/two-bedroom/">
+          <div class="svc-icon" aria-hidden="true">&#9783;</div>
+          <h3>2-Bedroom granny flats</h3>
+          <p>60&ndash;90m&sup2;. For couples, parents with a teen, or long-term rental. Two bedrooms, one bathroom, full kitchen, living, often a small study nook. $140K&ndash;$220K.</p>
+          <span class="svc-link">See 2-bedroom &rarr;</span>
+        </a>
+
+        <a class="svc-card" href="/services/dual-occupancy/">
+          <div class="svc-icon" aria-hidden="true">&#9783;</div>
+          <h3>Dual-occupancy second dwellings</h3>
+          <p>90&ndash;130m&sup2;. Full second dwelling designed to be subdivision-ready (separate title in future). Independent services, entry, parking. $180K&ndash;$280K. Best for Frankston South / Mt Eliza larger blocks.</p>
+          <span class="svc-link">See dual-occupancy &rarr;</span>
+        </a>
+
+        <a class="svc-card" href="/services/garden-studios/">
+          <div class="svc-icon" aria-hidden="true">&#9618;</div>
+          <h3>Garden studios &amp; home offices</h3>
+          <p>12&ndash;25m&sup2;. Below the 25m&sup2; / 3.6m height threshold = no planning permit needed in most zones. Home office, teen retreat, hobby workshop. $25K&ndash;$95K depending on plumbing.</p>
+          <span class="svc-link">See garden studios &rarr;</span>
+        </a>
+
+        <a class="svc-card" href="/services/ndis-sda/">
+          <div class="svc-icon" aria-hidden="true">&#9608;</div>
+          <h3>NDIS SDA granny flats</h3>
+          <p>Specialist Disability Accommodation, SDA-compliant to NDIA Design Standard. Improved Liveability through High Physical Support categories. $300K&ndash;$600K. Eligible for SDA rental income through registered SDA provider.</p>
+          <span class="svc-link">See NDIS SDA &rarr;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+  <figure class="image-banner">
+    <img src="/images/result.jpg" alt="Interior of a completed granny flat with open-plan living" loading="lazy" decoding="async" />
+    <figcaption>Fixed-price builds, DBI-insured, 8–16 week site time.</figcaption>
+  </figure>
+
+
+  <!-- WHY -->
+  <section class="section section-alt">
+    <div class="section-inner">
+      <span class="section-eyebrow">Why a Frankston specialist</span>
+      <h2>Three things every Frankston &amp; Peninsula granny flat needs to get right.</h2>
+      <div class="divider"></div>
+
+      <div style="display: grid; grid-template-columns: 1fr; gap: 2rem; max-width: 60rem;">
+        <div>
+          <h3>The right council pathway.</h3>
+          <p>
+            Frankston City Council and Mornington Peninsula Shire have very different
+            planning frameworks. Frankston City allows one second dwelling per lot
+            &ge;300m&sup2; with VicSmart fast-track (10 business days) for builds under
+            60m&sup2; that meet ResCode. The Peninsula Shire has overlays &mdash;
+            DDO (Design and Development), HO (Heritage), ESO (Environmental Significance),
+            BMO (Bushfire Management) &mdash; that can each require a separate permit
+            condition. We&rsquo;ve lodged in both councils for years and know the
+            shortcuts.
+          </p>
+        </div>
+        <div>
+          <h3>The right thermal design (NCC 2022 / 7-star NatHERS).</h3>
+          <p>
+            Every new dwelling in Victoria from 1 May 2023 must achieve a 7-star NatHERS
+            energy rating. For small granny flats this is harder, not easier &mdash;
+            less thermal mass and higher surface-area-to-volume ratio means insulation,
+            glazing and orientation have to be spot-on. We design with a NatHERS
+            assessor from day one rather than discovering at permit stage that the
+            window/wall ratio is wrong.
+          </p>
+        </div>
+        <div>
+          <h3>The right siting on Peninsula coastal blocks.</h3>
+          <p>
+            Mt Eliza, Mornington, Mt Martha and the southern Peninsula sit in AS 4312
+            salt-spray zones. Specifying stainless fixings, hot-dip-galvanised structural
+            steel, marine-grade cladding sealants and elevated subfloor ventilation
+            adds 4&ndash;8% to build cost but doubles the structural life. We do this
+            as standard within 3km of Port Phillip or Western Port Bay.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- AREAS -->
+  <section class="section">
+    <div class="section-inner">
+      <span class="section-eyebrow">Service areas</span>
+      <h2>Where we build.</h2>
+      <p class="lead" style="max-width: 42rem; margin-bottom: 1rem;">
+        We service the full Frankston City and Mornington Peninsula Shire municipalities.
+        Coastal-zone homes within 3km of the bay get salt-spray-rated specifications
+        as standard &mdash; not as an upsell.
+      </p>
+      <div class="areas-grid">
+        <a class="area-pill" href="/frankston-south/">Frankston South</a>
+        <a class="area-pill" href="/mt-eliza/">Mt Eliza</a>
+        <a class="area-pill" href="/mornington/">Mornington</a>
+        <a class="area-pill" href="/carrum-downs/">Carrum Downs</a>
+        <a class="area-pill" href="/seaford/">Seaford</a>
+        <a class="area-pill" href="/mornington-peninsula/">Mornington Peninsula</a>
+        <a class="area-pill" href="/quote/">Mt Martha</a>
+        <a class="area-pill" href="/quote/">Langwarrin</a>
+        <a class="area-pill" href="/quote/">Skye</a>
+        <a class="area-pill" href="/quote/">Karingal</a>
+        <a class="area-pill" href="/quote/">Somerville</a>
+        <a class="area-pill" href="/quote/">Baxter</a>
+      </div>
+    </div>
+  </section>
+  <figure class="image-banner">
+    <img src="/images/detail.jpg" alt="Mixed-material cladding detail close-up" loading="lazy" decoding="async" />
+    <figcaption>We handle the council permit + neighbour notification.</figcaption>
+  </figure>
+
+
+  <!-- PROCESS -->
+  <section class="section section-dark">
+    <div class="section-inner">
+      <span class="section-eyebrow">How it works</span>
+      <h2>From enquiry to keys &mdash; 5 stages.</h2>
+
+      <div class="steps">
+        <div class="step">
+          <div class="step-num">1</div>
+          <h3>Free consultation</h3>
+          <p>On-site visit. Site survey, soil check, services audit, council zone check. 60 min, no obligation.</p>
+        </div>
+        <div class="step">
+          <div class="step-num">2</div>
+          <h3>Design &amp; fixed quote</h3>
+          <p>Concept drawings, NatHERS pre-assessment, fixed-price quote within 7 days of consultation.</p>
+        </div>
+        <div class="step">
+          <div class="step-num">3</div>
+          <h3>Permits</h3>
+          <p>VicSmart (10 days) or full planning permit (3 months). We lodge with council on your behalf.</p>
+        </div>
+        <div class="step">
+          <div class="step-num">4</div>
+          <h3>Build</h3>
+          <p>Modular (12&ndash;18 weeks) or custom on-site (20&ndash;30 weeks) from contract. Weekly progress updates.</p>
+        </div>
+        <div class="step">
+          <div class="step-num">5</div>
+          <h3>Handover &amp; warranty</h3>
+          <p>Final inspection, council occupancy permit, NatHERS as-built rating. 6-year structural warranty + 12-month defects warranty.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section section-alt">
+    <div class="section-inner">
+      <span class="section-eyebrow">Common questions</span>
+      <h2>Frankston &amp; Peninsula granny flat FAQs.</h2>
+      <div class="divider"></div>
+
+      <div style="max-width: 56rem;">
+        <details style="background:#fff; border:1px solid var(--c-line); border-radius:6px; padding:1rem 1.25rem; margin-bottom:0.75rem;">
+          <summary style="font-weight:700; color:var(--c-navy); cursor:pointer; font-size:1.05rem;">How much does a granny flat cost in Frankston?</summary>
+          <p style="margin-top:0.75rem;">Most builds fall between <strong>$90K and $280K</strong>. 1-bed modular $90K&ndash;$130K, 1-bed custom $130K&ndash;$180K, 2-bed $140K&ndash;$220K, dual-occupancy $180K&ndash;$280K. Garden studios $25K&ndash;$95K. NDIS SDA-compliant $300K&ndash;$600K. Site prep, council fees, NatHERS report and connections add $8K&ndash;$25K.</p>
+        </details>
+        <details style="background:#fff; border:1px solid var(--c-line); border-radius:6px; padding:1rem 1.25rem; margin-bottom:0.75rem;">
+          <summary style="font-weight:700; color:var(--c-navy); cursor:pointer; font-size:1.05rem;">Do I need a planning permit?</summary>
+          <p style="margin-top:0.75rem;">Frankston City: lots &ge;300m&sup2; can have one second dwelling. Under 60m&sup2; uses <strong>VicSmart fast-track (10 business days)</strong>. Over 60m&sup2; or in an overlay: full planning permit (3 months). Mornington Peninsula Shire has tighter DDO/HO/BMO controls. We lodge both.</p>
+        </details>
+        <details style="background:#fff; border:1px solid var(--c-line); border-radius:6px; padding:1rem 1.25rem; margin-bottom:0.75rem;">
+          <summary style="font-weight:700; color:var(--c-navy); cursor:pointer; font-size:1.05rem;">How long does a build take?</summary>
+          <p style="margin-top:0.75rem;">Modular 12&ndash;18 weeks. Custom on-site 20&ndash;30 weeks. VicSmart can shave 6&ndash;10 weeks off approval time. Site prep is 2&ndash;3 weeks regardless of method. We sequence approval and design in parallel.</p>
+        </details>
+        <details style="background:#fff; border:1px solid var(--c-line); border-radius:6px; padding:1rem 1.25rem; margin-bottom:0.75rem;">
+          <summary style="font-weight:700; color:var(--c-navy); cursor:pointer; font-size:1.05rem;">Can I rent it out (long-term or Airbnb)?</summary>
+          <p style="margin-top:0.75rem;">Long-term rental: yes in most cases. Short-stay/Airbnb: <strong>Mornington Peninsula Shire requires registration</strong> with precinct caps; Frankston City is lighter. We design with future rental in mind &mdash; separate entry, separate meters, sound separation &mdash; so you keep options open.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- FINAL CTA -->
+  <section class="section">
+    <div class="section-inner">
+      <div class="cta-block">
+        <h2>Ready for a free on-site design consultation?</h2>
+        <p>60 minutes. We measure, check soil, check zone, give you the honest answer on what&rsquo;s possible.</p>
+        <div class="hero-actions" style="justify-content:center;">
+          <a class="btn btn-primary" href="tel:+61390030108">&#9742; Call (03) 9003 0108</a>
+          <a class="btn btn-ghost" href="/quote/">Book online</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="section section-tint">
+    <div class="section-inner">
+      <h2>Articles &amp; guides for Frankston</h2>
+      <p>Practical reading from our jobs in Frankston &mdash; what we charge, what to watch for, when a callout is worth it.</p>
+      <ul class="guides-list">
+          <li><a href="/granny-flat-build-process-frankston/">The granny flat build process in Frankston, explained</a></li>
+          <li><a href="/granny-flat-financing-frankston/">Financing a granny flat in Frankston</a></li>
+          <li><a href="/short-stay-granny-flat-mornington-peninsula/">Short-stay income from a Peninsula granny flat</a></li>
+      </ul>
+    </div>
+  </section>
+
+</Layout>

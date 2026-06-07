@@ -1,0 +1,382 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How long does it take to build a granny flat in Frankston?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "From first feasibility to handing over keys, allow 9&ndash;16 months on a typical Frankston block. Design and permits take the bulk of that time: planning permit 6&ndash;14 weeks, building permit 3&ndash;5 weeks, construction 12&ndash;18 weeks. Modular builds shave 6&ndash;10 weeks off construction. The 2023 small second dwelling reform helps some blocks skip the planning permit entirely, cutting 2&ndash;4 months."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do I need a planning permit for a granny flat in Frankston in 2026?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Not always. Under Victoria&rsquo;s 2023 small second dwelling reform, a secondary dwelling up to 60m&sup2; on a residential zoned lot may not need a planning permit if it meets setback, height, lot coverage and other conditions. But Frankston City overlays (vegetation, flooding, heritage) can override this. Always check with a qualified building surveyor or town planner before assuming permit-free status."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the difference between a DPU and a second dwelling in Victoria?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A Dependent Person&rsquo;s Unit (DPU) was the old permit-free path for a dependent family member only &mdash; it could not be rented commercially and had to be removed when the dependent left. A &lsquo;small second dwelling&rsquo; under the 2023 reform can be rented to anyone and stays permanently. The DPU pathway still exists but is rarely the right choice for a commercial rental. See our DPU vs second dwelling page for the full comparison."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What happens during a building permit inspection in Frankston?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A registered building surveyor (RBS) conducts mandatory inspections at key stages: footing/slab before concrete pour, frame before sheeting, wet areas before lining, and final occupancy. The RBS is engaged before construction starts and issues the occupancy permit at the end. Frankston City Council is not the inspector &mdash; the RBS handles all statutory inspection obligations for Class 1 residential dwellings."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I manage the granny flat project myself as an owner-builder in Frankston?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Technically yes, with an owner-builder permit from the VBA for work over $16,000. But granny flats are Class 1 buildings with complex NCC 2022 compliance, sewer connections, energy rating requirements and RBS oversight. Most Frankston owner-builders who start this way finish it with a registered builder after running into compliance or trade coordination issues. We&rsquo;d recommend at minimum engaging a builder for the permit and frame stages."
+      }
+    }
+  ]
+};
+---
+<Layout
+  title="Granny Flat Build Process in Frankston 2026 | Step-by-Step Timeline | (03) 9003 0108"
+  description="What actually happens building a Frankston granny flat: feasibility, Victoria's small second dwelling rules, building permit, construction stages and a realistic timeline."
+  canonical="https://frankstongrannyflats.com.au/granny-flat-build-process-frankston/">
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+  </Fragment>
+
+  <section class="hero">
+    <div class="hero-inner">
+      <span class="hero-eyebrow">Stage-by-stage guide &middot; Frankston &amp; Peninsula</span>
+      <h1>The granny flat build process in <span class="accent">Frankston</span>, explained.</h1>
+      <p class="hero-sub">
+        Most builders give you a timeline. We give you the whole picture &mdash;
+        every decision point, who&rsquo;s responsible, what costs arise, and
+        where Victorian planning rules either speed things up or add weeks.
+        No glossed-over gaps, no surprises at lock-up.
+      </p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="tel:+61390030108">&#9742; Call (03) 9003 0108</a>
+        <a class="btn btn-ghost" href="/quote/">Free quote</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-inner">
+      <span class="section-eyebrow">Stage 1 &mdash; weeks 1&ndash;3</span>
+      <h2>Feasibility &amp; site assessment.</h2>
+      <div class="divider"></div>
+      <div style="max-width: 65rem;">
+        <h3>Is your block actually suitable?</h3>
+        <p>
+          Before anything goes on paper, we check the fundamentals. Frankston
+          City residential lots vary enormously &mdash; a 700m&sup2; Frankston
+          South block behind a large 1970s home has very different options from
+          a 400m&sup2; Carrum Downs estate block. We look at:
+        </p>
+        <ul>
+          <li><strong>Zoning and overlays:</strong> General Residential Zone (GRZ), Neighbourhood Residential Zone (NRZ), Significant Landscape Overlay (SLO) and Wildfire Management Overlay (WMO) all affect what is possible and how.</li>
+          <li><strong>Lot size:</strong> Frankston City requires a minimum 300m&sup2; lot for a second dwelling. Larger lots give more setback flexibility.</li>
+          <li><strong>Site access:</strong> Can materials reach the rear yard? Is crane-in viable from the street? Narrow side passages push cost up sharply.</li>
+          <li><strong>Services:</strong> South East Water sewer location, stormwater connection points, power meter position &mdash; these dictate the service connection cost before a trench is dug.</li>
+          <li><strong>Existing structures:</strong> Garages, sheds, pools and mature trees that may need relocating or that eat into setback calculations.</li>
+        </ul>
+        <p style="margin-top: 1rem;">
+          Your <strong>owner decision at this stage:</strong> go/no-go and rough budget alignment. If the site is marginal, we tell you plainly &mdash; before you spend a dollar on design.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-alt">
+    <div class="section-inner">
+      <span class="section-eyebrow">Stage 2 &mdash; weeks 3&ndash;8</span>
+      <h2>Design &amp; the Victorian planning pathway decision.</h2>
+      <div class="divider"></div>
+      <div style="max-width: 65rem;">
+        <h3>Concept design and the permit question.</h3>
+        <p>
+          Once the site stacks up, we move into concept design &mdash; floor
+          plan, orientation, roof form &mdash; and determine the planning
+          pathway. This is the fork in the road that most timelines gloss over.
+        </p>
+
+        <h3 style="margin-top: 2rem;">Victoria&rsquo;s 2023 small second dwelling reform.</h3>
+        <p>
+          From 2023, Victoria amended its planning provisions so a secondary
+          dwelling up to <strong>60m&sup2;</strong> may not require a planning
+          permit, provided the lot is residentially zoned and specific design
+          criteria are met (setbacks, height, lot coverage, open space). This
+          is a meaningful change &mdash; it can cut 2&ndash;4 months from the
+          programme and several thousand dollars in planning fees. However:
+        </p>
+        <ul>
+          <li>Frankston City overlays (vegetation, flooding, heritage zones) can still trigger a planning permit even for a sub-60m&sup2; dwelling.</li>
+          <li>The conditions are strict &mdash; exceed any one parameter and you&rsquo;re back into the permit pathway.</li>
+          <li>A <strong>Dependent Person&rsquo;s Unit (DPU)</strong> remains a separate permit-free pathway but is restricted to dependent family members and cannot be commercially rented. See our <a href="/dpu-vs-second-dwelling/">DPU vs second dwelling comparison</a> for the full picture.</li>
+        </ul>
+        <p style="margin-top: 1rem;">
+          Full rules are covered on our <a href="/victorian-planning-rules/">Victorian planning rules page</a>. Your builder or town planner should confirm which pathway applies before lodging anything.
+        </p>
+
+        <h3 style="margin-top: 2rem;">Working drawings &amp; NatHERS energy report.</h3>
+        <p>
+          Assuming permit-free or once the planning pathway is confirmed, we
+          commission full working drawings &mdash; architectural + structural +
+          wet-area waterproofing details. A registered NatHERS assessor produces
+          the <strong>7-star energy report</strong> required under NCC 2022. This
+          typically takes 1&ndash;2 weeks alongside the drawing phase.
+        </p>
+
+        <p style="margin-top: 1rem;">
+          <strong>Owner decisions at this stage:</strong> finalise floor plan,
+          choose cladding and roofing, confirm kitchen/bathroom specification.
+          Changes after working drawings are approved add cost and time.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-inner">
+      <span class="section-eyebrow">Stage 3 &mdash; weeks 8&ndash;22 (permit pathway) or weeks 8&ndash;14 (permit-free)</span>
+      <h2>Planning permit &amp; building permit.</h2>
+      <div class="divider"></div>
+      <div style="max-width: 65rem;">
+        <h3>Planning permit &mdash; Frankston City Council (if required).</h3>
+        <p>
+          A planning permit application to Frankston City Council involves
+          submitting the working drawings, a planning report, shadow diagrams
+          and sometimes a BESS sustainable design report. The statutory
+          assessment period is <strong>60 days</strong>, but in practice most
+          straightforward applications are determined in <strong>8&ndash;14
+          weeks</strong>. Neighbour notice (advertising) adds 14 days. If an
+          objection is lodged, the timeline extends further and may require a
+          VCAT hearing in the worst case.
+        </p>
+        <p style="margin-top: 1rem;">
+          Council application fees in Frankston City: $1,440 for a residential
+          second dwelling + $186 advertising. See our <a href="/cost/">full cost
+          breakdown</a> for all permit line items.
+        </p>
+
+        <h3 style="margin-top: 2rem;">Building permit &mdash; private building surveyor.</h3>
+        <p>
+          In Victoria, residential building permits are issued by a
+          <strong>Registered Building Surveyor (RBS)</strong>, not the council.
+          You engage the RBS before construction starts. They review the working
+          drawings for NCC 2022 compliance, issue the permit (typically
+          3&ndash;5 weeks from full application), and then conduct mandatory
+          statutory inspections throughout the build. Their occupancy permit at
+          the end is the legal document that makes the dwelling habitable.
+        </p>
+        <ul style="margin-top: 1rem;">
+          <li>Building permit cost: typically $1,900&ndash;$2,800 for a granny flat.</li>
+          <li>Inspections included: footing, frame, wet areas pre-lining, final occupancy.</li>
+          <li>Insurance: your builder must hold Domestic Building Insurance (DBI) before any permit is issued &mdash; ask to see the certificate.</li>
+        </ul>
+
+        <p style="margin-top: 1rem;">
+          <strong>Owner decision at this stage:</strong> appoint the RBS (we
+          typically recommend one we work with regularly &mdash; no obligation),
+          sign off the building contract and pay the first progress payment.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-alt">
+    <div class="section-inner">
+      <span class="section-eyebrow">Stage 4 &mdash; construction</span>
+      <h2>Construction stages &amp; realistic timeframes.</h2>
+      <div class="divider"></div>
+      <div style="max-width: 65rem;">
+        <h3>Slab &mdash; weeks 1&ndash;3 of construction.</h3>
+        <p>
+          Site is prepared, services trenched (sewer, water, power, data),
+          formwork set and the concrete waffle-pod slab poured. RBS inspects
+          before pour. Allow 3&ndash;5 days curing before frame work begins. On
+          <a href="/seaford/">Seaford</a> and coastal sites, sandy soil
+          conditions can require a deeper or engineered footing &mdash; confirmed
+          by the soil test in Stage 1.
+        </p>
+
+        <h3 style="margin-top: 2rem;">Frame &mdash; weeks 3&ndash;5 of construction.</h3>
+        <p>
+          Timber or steel frame erected, roof trusses set, sarking and roof
+          cladding installed. Frame RBS inspection occurs before wall sheeting
+          begins. This is the stage where you can first walk through and see
+          room sizes &mdash; many owners visit site at frame stage.
+        </p>
+
+        <h3 style="margin-top: 2rem;">Lock-up &mdash; weeks 5&ndash;9 of construction.</h3>
+        <p>
+          External cladding, windows and external doors installed &mdash; the
+          building is now weather-tight and &ldquo;locked up.&rdquo; Rough-in
+          electrical and plumbing happens during this phase, and insulation is
+          installed before internal lining begins. Wet-area RBS inspection
+          before tiling.
+        </p>
+
+        <h3 style="margin-top: 2rem;">Fit-out &amp; finishes &mdash; weeks 9&ndash;15 of construction.</h3>
+        <p>
+          Plasterboard, cornice, skirting, kitchen installation, bathroom tiling
+          and fixtures, floor coverings, internal paint, joinery. This is the
+          longest phase and where the bulk of owner selections (tapware, tiles,
+          handles) become visible. Electrical fit-off and plumbing connections
+          finalised. If you haven&rsquo;t decided on selections by lock-up, expect
+          delays here.
+        </p>
+
+        <h3 style="margin-top: 2rem;">Handover &mdash; weeks 15&ndash;18 of construction.</h3>
+        <p>
+          Final RBS inspection, occupancy permit issued, practical completion
+          walk-through with the owner. Defect list compiled and rectified (allow
+          2&ndash;4 weeks for minor items). Keys handed over. Frankston City
+          Council receives notification of the completed second dwelling via the
+          RBS.
+        </p>
+        <p style="margin-top: 1rem;">
+          Modular builds compress the construction phase significantly &mdash;
+          factory fabrication runs in parallel with your site preparation, so
+          the crane-in and connection phase on site is often just
+          4&ndash;6 weeks. Ideal for tight <a href="/carrum-downs/">Carrum
+          Downs</a> lots where access limits traditional construction.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-inner">
+      <span class="section-eyebrow">Summary</span>
+      <h2>Realistic end-to-end timeline at a glance.</h2>
+      <div class="divider"></div>
+      <div style="max-width: 65rem;">
+        <ul>
+          <li><strong>Feasibility &amp; site assessment:</strong> 1&ndash;3 weeks</li>
+          <li><strong>Design + NatHERS energy report:</strong> 4&ndash;6 weeks</li>
+          <li><strong>Planning permit (if required):</strong> 8&ndash;14 weeks (adds ~2&ndash;4 months; permit-free bypasses this)</li>
+          <li><strong>Building permit:</strong> 3&ndash;5 weeks (runs concurrently with planning where possible)</li>
+          <li><strong>Construction &mdash; traditional build:</strong> 15&ndash;18 weeks</li>
+          <li><strong>Construction &mdash; modular crane-in:</strong> 4&ndash;6 weeks on site</li>
+          <li><strong>Defect rectification &amp; final occupancy:</strong> 2&ndash;4 weeks</li>
+        </ul>
+        <p style="margin-top: 1rem;">
+          <strong>Permit-free pathway total:</strong> approximately 6&ndash;9 months from first meeting to keys. <br>
+          <strong>Full planning permit pathway total:</strong> approximately 11&ndash;16 months.
+        </p>
+        <p style="margin-top: 1rem;">
+          For rental income planning, see our <a href="/rental-income/">rental income page</a>
+          and <a href="/timeline/">timeline overview</a>. Considering a
+          <a href="/services/one-bedroom/">1-bedroom</a> or
+          <a href="/services/two-bedroom/">2-bedroom</a> build? Both pages carry
+          the typical construction durations for each size. If a
+          <a href="/services/dual-occupancy/">dual-occupancy</a> development is
+          on the table, the planning pathway is different again &mdash; allow a
+          longer programme.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-alt">
+    <div class="section-inner">
+      <h2>Frequently asked questions.</h2>
+      <div class="divider"></div>
+      <div style="max-width: 65rem;">
+        <h3>How long does it take to build a granny flat in Frankston?</h3>
+        <p>
+          From first feasibility to handing over keys, allow 9&ndash;16 months
+          on a typical Frankston block. Design and permits take the bulk of that
+          time: planning permit 6&ndash;14 weeks, building permit 3&ndash;5 weeks,
+          construction 12&ndash;18 weeks. Modular builds shave 6&ndash;10 weeks
+          off construction. The 2023 small second dwelling reform helps some
+          blocks skip the planning permit entirely, cutting 2&ndash;4 months.
+        </p>
+
+        <h3 style="margin-top: 2rem;">Do I need a planning permit for a granny flat in Frankston in 2026?</h3>
+        <p>
+          Not always. Under Victoria&rsquo;s 2023 small second dwelling reform,
+          a secondary dwelling up to 60m&sup2; on a residential zoned lot may not
+          need a planning permit if it meets setback, height, lot coverage and
+          other conditions. But Frankston City overlays (vegetation, flooding,
+          heritage) can override this. Always check with a qualified building
+          surveyor or town planner before assuming permit-free status.
+        </p>
+
+        <h3 style="margin-top: 2rem;">What is the difference between a DPU and a second dwelling in Victoria?</h3>
+        <p>
+          A Dependent Person&rsquo;s Unit (DPU) was the old permit-free path
+          for a dependent family member only &mdash; it could not be rented
+          commercially and had to be removed when the dependent left. A
+          &lsquo;small second dwelling&rsquo; under the 2023 reform can be rented
+          to anyone and stays permanently. The DPU pathway still exists but is
+          rarely the right choice for a commercial rental. See our
+          <a href="/dpu-vs-second-dwelling/">DPU vs second dwelling page</a> for
+          the full comparison.
+        </p>
+
+        <h3 style="margin-top: 2rem;">What happens during a building permit inspection in Frankston?</h3>
+        <p>
+          A registered building surveyor (RBS) conducts mandatory inspections at
+          key stages: footing/slab before concrete pour, frame before sheeting,
+          wet areas before lining, and final occupancy. The RBS is engaged before
+          construction starts and issues the occupancy permit at the end. Frankston
+          City Council is not the inspector &mdash; the RBS handles all statutory
+          inspection obligations for Class 1 residential dwellings.
+        </p>
+
+        <h3 style="margin-top: 2rem;">Can I manage the granny flat project myself as an owner-builder in Frankston?</h3>
+        <p>
+          Technically yes, with an owner-builder permit from the VBA for work
+          over $16,000. But granny flats are Class 1 buildings with complex NCC
+          2022 compliance, sewer connections, energy rating requirements and RBS
+          oversight. Most Frankston owner-builders who start this way finish it
+          with a registered builder after running into compliance or trade
+          coordination issues. We&rsquo;d recommend at minimum engaging a builder
+          for the permit and frame stages.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-alt">
+    <div class="section-inner">
+      <h2>Where we build.</h2>
+      <div class="areas-grid">
+        <a class="area-pill" href="/carrum-downs/">Carrum Downs</a>
+        <a class="area-pill" href="/frankston-south/">Frankston South</a>
+        <a class="area-pill" href="/mornington/">Mornington</a>
+        <a class="area-pill" href="/mt-eliza/">Mt Eliza</a>
+        <a class="area-pill" href="/seaford/">Seaford</a>
+        <a class="area-pill" href="/mornington-peninsula/">Mornington Peninsula</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-inner">
+      <div class="cta-block">
+        <h2>Know exactly what you&rsquo;re signing up for.</h2>
+        <p>Free site feasibility, honest timeline, written fixed-price quote. No surprises at stage 3.</p>
+        <div class="hero-actions" style="justify-content:center;">
+          <a class="btn btn-primary" href="tel:+61390030108">&#9742; Call (03) 9003 0108</a>
+          <a class="btn btn-ghost" href="/quote/">Free quote</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>

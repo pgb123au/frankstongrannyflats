@@ -1,0 +1,206 @@
+---
+import '../styles/global.css';
+
+interface Props {
+  title: string;
+  description: string;
+  canonical?: string;
+  ogType?: string;
+  noindex?: boolean;
+}
+
+const SITE = 'https://frankstongrannyflats.com.au';
+const PHONE_DISPLAY = '(03) 9003 0108';
+const PHONE_TEL = '+61390030108';
+const EMAIL = 'quotes@frankstongrannyflats.com.au';
+const BIZ_NAME = 'Frankston Granny Flats';
+
+const { title, description, canonical = SITE + '/', ogType = 'website', noindex = false } = Astro.props;
+
+const localBusinessSchema = {
+  "@context": "https://schema.org",
+  "@type": "GeneralContractor",
+  "@id": SITE + "/#business",
+  "name": BIZ_NAME,
+  "image": SITE + "/images/og-image.jpg",
+  "url": SITE,
+  "telephone": PHONE_TEL,
+  "priceRange": "$$$",
+  "description": "Specialist granny flat &amp; second-dwelling builders serving Frankston, the Mornington Peninsula and surrounds. 1-bedroom and 2-bedroom granny flats, dual-occupancy second dwellings, garden studios, NDIS SDA-compliant builds. VicSmart fast-track and full planning permit pathways. NCC 2022 / 7-star NatHERS compliant.",
+  "areaServed": [
+    { "@type": "City", "name": "Frankston", "containedInPlace": { "@type": "AdministrativeArea", "name": "Frankston City" } },
+    { "@type": "City", "name": "Frankston South" },
+    { "@type": "City", "name": "Mt Eliza" },
+    { "@type": "City", "name": "Mornington" },
+    { "@type": "City", "name": "Carrum Downs" },
+    { "@type": "City", "name": "Seaford" },
+    { "@type": "City", "name": "Skye" },
+    { "@type": "City", "name": "Langwarrin" },
+    { "@type": "City", "name": "Mt Martha" },
+    { "@type": "City", "name": "Karingal" }
+  ],
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Frankston",
+    "addressRegion": "VIC",
+    "postalCode": "3199",
+    "addressCountry": "AU"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": -38.1411,
+    "longitude": 145.1219
+  },
+  "openingHoursSpecification": [{
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],
+    "opens": "07:00",
+    "closes": "18:00"
+  }],
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Granny Flat & Second Dwelling Services",
+    "itemListElement": [
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "1-Bedroom Granny Flats" }},
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "2-Bedroom Granny Flats" }},
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Dual-Occupancy Second Dwellings" }},
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Garden Studios & Home Offices" }},
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "NDIS SDA Granny Flats" }}
+    ]
+  }
+};
+
+const websiteSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "@id": SITE + "/#website",
+  "url": SITE + "/",
+  "name": BIZ_NAME,
+  "inLanguage": "en-AU",
+  "publisher": { "@id": SITE + "/#business" }
+};
+---
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{title}</title>
+  <meta name="description" content={description}>
+  <link rel="canonical" href={canonical}>
+  <meta name="robots" content={noindex ? "noindex, follow" : "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"}>
+  <meta name="theme-color" content="#14304a">
+
+  <meta property="og:type" content={ogType}>
+  <meta property="og:title" content={title}>
+  <meta property="og:description" content={description}>
+  <meta property="og:url" content={canonical}>
+  <meta property="og:locale" content="en_AU">
+  <meta property="og:site_name" content={BIZ_NAME}>
+  <meta property="og:image" content={SITE + "/images/og-image.jpg"}>
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content={BIZ_NAME}>
+  <meta name="twitter:image" content={SITE + "/images/og-image.jpg"}>
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content={title}>
+  <meta name="twitter:description" content={description}>
+
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='5' fill='%2314304a'/><text x='16' y='22' text-anchor='middle' fill='%23d97706' font-family='Georgia' font-size='18' font-weight='bold'>F</text></svg>">
+
+  <!-- Google Search Console verification (URL-prefix backup; primary verification via DNS TXT on sc-domain property) -->
+  <meta name="google-site-verification" content="PLACEHOLDER_GSC_TOKEN">
+
+  <!-- Google Analytics 4 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script is:inline>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX', {
+      'send_page_view': true,
+      'anonymize_ip': true
+    });
+  </script>
+
+  <script type="application/ld+json" set:html={JSON.stringify(localBusinessSchema)} />
+  <script type="application/ld+json" set:html={JSON.stringify(websiteSchema)} />
+
+  <slot name="head" />
+</head>
+<body>
+  <div class="top-bar">
+    <span>Free design consultations &middot; Frankston &middot; Mornington Peninsula &middot; Call <a href={`tel:${PHONE_TEL}`}>{PHONE_DISPLAY}</a></span>
+  </div>
+
+  <header class="site-header">
+    <div class="nav-wrap">
+      <a class="brand" href="/" aria-label="Frankston Granny Flats home">
+        <small>Frankston &middot; Frankston South &middot; Mt Eliza &middot; Mornington Peninsula</small>
+        Frankston Granny Flats
+      </a>
+      <ul class="nav-links">
+        <li><a href="/services/one-bedroom/">1-Bed</a></li>
+        <li><a href="/services/two-bedroom/">2-Bed</a></li>
+        <li><a href="/services/dual-occupancy/">Dual-Occupancy</a></li>
+        <li><a href="/services/garden-studios/">Studios</a></li>
+        <li><a href="/services/ndis-sda/">NDIS SDA</a></li>
+        <li><a href="/mornington-peninsula/">Areas</a></li>
+      </ul>
+      <a class="nav-cta" href="/quote/">Free Consultation</a>
+    </div>
+  </header>
+
+  <main>
+    <slot />
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div>
+        <h4>Frankston Granny Flats</h4>
+        <p style="margin-bottom: 0.75rem;">Specialist granny flat &amp; second-dwelling builders serving Frankston, the Mornington Peninsula and surrounds. VBA-registered. NCC 2022 / 7-star NatHERS compliant.</p>
+        <p style="margin-bottom: 0.5rem;"><strong style="color:#fff;">Phone:</strong> <a href={`tel:${PHONE_TEL}`}>{PHONE_DISPLAY}</a></p>
+        <p style="margin-bottom: 0.5rem;"><strong style="color:#fff;">Hours:</strong> Mon&ndash;Sat 7am&ndash;6pm</p>
+        <p style="margin-bottom: 0.5rem;"><strong style="color:#fff;">Service area:</strong> Frankston VIC 3199 &amp; Mornington Peninsula</p>
+        <p style="margin-bottom: 0;"><strong style="color:#fff;">ABN:</strong> 91 664 546 061</p>
+      </div>
+      <div>
+        <h4>Services</h4>
+        <ul>
+          <li><a href="/services/one-bedroom/">1-bedroom granny flats</a></li>
+          <li><a href="/services/two-bedroom/">2-bedroom granny flats</a></li>
+          <li><a href="/services/dual-occupancy/">Dual-occupancy second dwellings</a></li>
+          <li><a href="/services/garden-studios/">Garden studios &amp; home offices</a></li>
+          <li><a href="/services/ndis-sda/">NDIS SDA granny flats</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Service Areas</h4>
+        <ul>
+          <li><a href="/frankston-south/">Frankston South</a></li>
+          <li><a href="/mt-eliza/">Mt Eliza</a></li>
+          <li><a href="/mornington/">Mornington</a></li>
+          <li><a href="/carrum-downs/">Carrum Downs</a></li>
+          <li><a href="/seaford/">Seaford</a></li>
+          <li><a href="/mornington-peninsula/">Full Peninsula</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Resources</h4>
+        <ul>
+          <li><a href="/pricing/">Pricing guide</a></li>
+        </ul>
+      </div>
+    </div>
+    <p class="footer-bottom">
+      &copy; {new Date().getFullYear()} {BIZ_NAME} &middot; Yes Right Pty Ltd ABN 91 664 546 061. Free design consultations across Frankston City and the Mornington Peninsula.
+    </p>
+  </footer>
+
+  <a class="mobile-phone" href={`tel:${PHONE_TEL}`} aria-label={`Call ${PHONE_DISPLAY}`}>
+    <span aria-hidden="true">&#9742;</span> Call {PHONE_DISPLAY}
+  </a>
+</body>
+</html>
